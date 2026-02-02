@@ -34,3 +34,9 @@ export const logoutUser = () => {
 export const updateUser = (updatedData) => {
   localStorage.setItem("user", JSON.stringify(updatedData));
 };
+
+
+// Check login status
+export const isAuthenticated = () => {
+  return localStorage.getItem("isLoggedIn") === "true";
+};
